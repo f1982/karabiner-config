@@ -14,6 +14,7 @@ import { leftSymbol, rightSymbol } from './layers/symbol-layer'
 import { quickLaunch } from './quick-launch'
 import { notion } from './apps/notion'
 import { holistic } from './holistic'
+import { slack } from './apps/slack'
 
 // ! Change 'Examples' to your Karabiner-Elements Profile name.
 // + Create a new profile if needed.
@@ -35,4 +36,5 @@ writeToProfile('Examples', [
   vscode,
   arc,
   notion,
+  slack,
 ])

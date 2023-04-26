@@ -1,7 +1,7 @@
 import { FromKeyParam, map, simlayer } from 'karabiner.ts'
 
 const key2app: { key: FromKeyParam; app: string }[] = [
-  { key: 'q', app: '"System Settings"' },
+  { key: ',', app: 'System Settings' },
   { key: 'w', app: 'Wechat' },
   { key: 'e', app: 'Email' },
   { key: 'r', app: 'Notion' },

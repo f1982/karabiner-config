@@ -3,7 +3,6 @@ import { map, simlayer } from 'karabiner.ts'
 export const systemLayer = simlayer('s', 'system').manipulators([
   map('q').to('q', 'left_command'),
   map('y').to('up_arrow', 'left_control'),
-
   map('u').to('display_brightness_decrement'),
   map('i').to('display_brightness_increment'),
   map('o').to('o', 'left_command'),
