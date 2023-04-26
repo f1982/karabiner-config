@@ -1,0 +1,27 @@
+{
+  "name": "karabiner.ts-examples",
+  "description": "Examples for using karabiner.ts",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon src/index.ts",
+    "build": "ts-node src/index.ts",
+    "update": "npm update karabiner.ts"
+  },
+  "devDependencies": {
+    "karabiner.ts": "latest",
+    "prettier": "^2.8.7",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "nodemonConfig": {
+    "verbose": true,
+    "ignore": [
+      "node_modules/**/node_modules"
+    ],
+    "ext": "ts,json",
+    "delay": 1000
+  }
+}
