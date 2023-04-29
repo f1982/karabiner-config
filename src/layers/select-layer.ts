@@ -1,7 +1,10 @@
 import { map, simlayer } from 'karabiner.ts'
 
 export const selectLayer = simlayer('w', 'word-select').manipulators([
-  map('y').to('c', 'command'),
+  // 3 ways of copy
+  map('q').to('c', 'command'),
+  map('spacebar').to('c', 'command'),
+
   map('u').to('left_arrow', 'shift'),
   map('i').to('right_arrow', 'shift'),
   map('h').to('left_arrow', ['shift', 'command']),

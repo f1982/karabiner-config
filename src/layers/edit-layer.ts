@@ -3,7 +3,6 @@ import { simlayer, map } from 'karabiner.ts'
 export const editLayer = simlayer('e', 'edit').manipulators([
   map('u').to('left_arrow'),
   map('i').to('right_arrow'),
-  map('p').to('v', 'command'),
 
   map('h').to('left_arrow', 'command'),
   map('j').to('left_arrow', 'option'),
@@ -12,4 +11,8 @@ export const editLayer = simlayer('e', 'edit').manipulators([
 
   map('m').to('up_arrow'),
   map('comma').to('down_arrow'),
+
+  // Paste
+  map('spacebar').to('v', 'command'),
+  map('r').to('v', 'command'),
 ])

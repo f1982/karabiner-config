@@ -12,6 +12,7 @@ const key2app: { key: FromKeyParam; app: string }[] = [
   { key: 'g', app: 'Photo' },
   { key: 'z', app: 'Zoom' },
   { key: 'x', app: 'XCode' },
+  { key: 'b', app: 'Arc' },
 ]
 
 export const quickLaunch = simlayer('spacebar', 'quick launch').manipulators(

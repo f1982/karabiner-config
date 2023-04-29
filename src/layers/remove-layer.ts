@@ -7,4 +7,7 @@ export const removeLayer = simlayer('r', 'remove').manipulators([
   map('j').to('delete_or_backspace', 'option'),
   map('k').to('delete_forward', 'option'),
   map('l').to('delete_forward', 'command'),
+
+  // Paste
+  map('spacebar').to('v', 'command'),
 ])
