@@ -19,6 +19,7 @@ import { chrome } from './apps/chrome'
 import { zoom } from './apps/zoom'
 import { mail } from './apps/mail'
 import { spotify } from './apps/spotify'
+import { emoji } from './layers/emoji-layer'
 
 // ! Change 'Examples' to your Karabiner-Elements Profile name.
 // + Create a new profile if needed.
@@ -43,6 +44,7 @@ writeToProfile('Examples', [
   chrome,
   mail,
   spotify,
+  emoji,
   notion,
   slack,
 ])
