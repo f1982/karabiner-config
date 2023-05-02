@@ -15,6 +15,10 @@ import { quickLaunch } from './quick-launch'
 import { notion } from './apps/notion'
 import { holistic } from './holistic'
 import { slack } from './apps/slack'
+import { chrome } from './apps/chrome'
+import { zoom } from './apps/zoom'
+import { mail } from './apps/mail'
+import { spotify } from './apps/spotify'
 
 // ! Change 'Examples' to your Karabiner-Elements Profile name.
 // + Create a new profile if needed.
@@ -35,6 +39,10 @@ writeToProfile('Examples', [
   // Apps
   vscode,
   arc,
+  zoom,
+  chrome,
+  mail,
+  spotify,
   notion,
   slack,
 ])
