@@ -46,7 +46,6 @@ writeToProfile('Examples', [
   mail,
   spotify,
   xcode,
-  emoji,
   notion,
   slack,
 ])

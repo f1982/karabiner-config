@@ -1,5 +1,6 @@
 import { layer, map, withMapper } from 'karabiner.ts'
 
+// This make input zh very slow and easy to make mistake
 export const emoji = layer('z', 'z-mode').manipulators([
   withMapper({
     j: '😂', // _joy
