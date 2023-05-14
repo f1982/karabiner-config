@@ -1,4 +1,4 @@
-import { FromKeyParam, map, simlayer } from 'karabiner.ts'
+import { FromKeyParam, layer, map } from 'karabiner.ts'
 
 const key2app: { key: FromKeyParam; app: string }[] = [
   { key: ',', app: 'System Settings' },
@@ -15,6 +15,6 @@ const key2app: { key: FromKeyParam; app: string }[] = [
   { key: 'b', app: 'Arc' },
 ]
 
-export const quickLaunch = simlayer('spacebar', 'quick launch').manipulators(
-  key2app.map((item) => map(item.key).toApp(item.app)),
-)
+export const quickLaunch = layer('q', 'quick launch')
+  .modifiers('Hyper')
+  .manipulators(key2app.map((item) => map(item.key).toApp(item.app)))

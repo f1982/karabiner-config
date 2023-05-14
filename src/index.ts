@@ -37,6 +37,7 @@ writeToProfile('Examples', [
   numberLayer,
   leftSymbol,
   rightSymbol,
+  emoji,
 
   // Apps
   vscode,
