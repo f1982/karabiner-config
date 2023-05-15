@@ -8,10 +8,9 @@ export const selectLayer = simlayer('w', 'word-select').manipulators([
   map('k').to('right_arrow', ['shift', 'option']),
   map('l').to('right_arrow', ['shift', 'command']),
   // 3 ways of copy
-  map('m').to('c', 'command'),
-  map('q').to('c', 'command'),
-  map('spacebar').to('c', 'command'),
+  map('p').to('c', 'command'),
+  // map('q').to('c', 'command'),
+  // map('spacebar').to('c', 'command'),
 
-  map('n').to('x', 'command'),
-  map('return').to('x', 'command'),
+  map('o').to('x', 'command'),
 ])

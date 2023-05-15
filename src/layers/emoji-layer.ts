@@ -1,7 +1,7 @@
-import { layer, map, withMapper } from 'karabiner.ts'
+import { duoLayer, map, withMapper } from 'karabiner.ts'
 
-export const emoji = layer('z', 'z-mode')
-  .modifiers('Hyper')
+// export const emoji = layer('z', 'z-mode')
+export const emoji = duoLayer('z', 'x','z-mode')
   .manipulators([
     withMapper({
       j: '😂', // _joy

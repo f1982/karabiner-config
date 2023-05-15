@@ -1,7 +1,8 @@
-import { layer, map } from 'karabiner.ts'
+import { layer, map, simlayer } from 'karabiner.ts'
 
-export const rightSymbol = layer('f', 'symbol-right')
-  .modifiers('Hyper')
+// export const rightSymbol = layer('f', 'symbol-right')
+  // .modifiers('Hyper')
+export const rightSymbol = simlayer('f', 'symbol-right')
   .manipulators([
     map('y').to('grave_accent_and_tilde', 'shift'),
     map('u').to('open_bracket', 'shift'),
@@ -21,8 +22,9 @@ export const rightSymbol = layer('f', 'symbol-right')
     map('slash').to('slash', 'shift'),
   ])
 
-export const leftSymbol = layer('j', 'symbol-left')
-  .modifiers('Hyper')
+// export const leftSymbol = layer('j', 'symbol-left')
+  // .modifiers('Hyper')
+export const leftSymbol = simlayer('j', 'symbol-left')
   .manipulators([
     map('q').to('`'),
     map('w').to('`', 'shift'),
