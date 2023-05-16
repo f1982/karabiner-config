@@ -11,6 +11,10 @@ export const holistic = rule('Global shortcut keys').manipulators([
   mapSimultaneous(['s', 'f']).to('left_shift', 'left_option'),
 
   mapSimultaneous(['j', 'k']).to('right_command'),
+  mapSimultaneous(['k', 'l']).to('right_option'),
+  mapSimultaneous(['l', 'semicolon']).to('right_control'),
+  mapSimultaneous(['j', 'semicolon']).to('right_shift'),
+  mapSimultaneous(['j', 'l']).to('right_shift', 'right_option'),
 
   // Single tap right shift to read selected text
   map('right_shift')
