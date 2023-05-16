@@ -1,18 +1,23 @@
-import { duoLayer, map, mapDoubleTap, mapSimultaneous, rule } from 'karabiner.ts'
+import { map, mapDoubleTap, mapSimultaneous, rule } from 'karabiner.ts'
 
 export const holistic = rule('Global shortcut keys').manipulators([
   // Remap caps_lock to esc
   map('⇪').toHyper().toIfAlone('⎋'),
 
-  mapSimultaneous(['f','d']).to('left_command'),
-  mapSimultaneous(['d','s']).to('left_option'),
-  mapSimultaneous(['s','a']).to('left_control'),
-  mapSimultaneous(['a','f']).to('left_shift'),
-  mapSimultaneous(['s','f']).to('left_shift','left_option'),
-  
-  mapSimultaneous(['j','k']).to('right_command'),
-  
+  mapSimultaneous(['f', 'd']).to('left_command'),
+  mapSimultaneous(['d', 's']).to('left_option'),
+  mapSimultaneous(['s', 'a']).to('left_control'),
+  mapSimultaneous(['a', 'f']).to('left_shift'),
+  mapSimultaneous(['s', 'f']).to('left_shift', 'left_option'),
 
+  mapSimultaneous(['j', 'k']).to('right_command'),
+
+  // Single tap right shift to read selected text
+  map('right_shift')
+    .to('right_shift')
+    .toIfAlone('p', ['left_option', 'left_control']),
+
+  // Double click esc to look up in dictionary
   mapDoubleTap('escape').to('r', [
     'left_control',
     'left_option',
