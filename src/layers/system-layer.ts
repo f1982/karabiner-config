@@ -1,11 +1,15 @@
 import { map, simlayer } from 'karabiner.ts'
 
 export const systemLayer = simlayer('s', 'system').manipulators([
+  //Quite current app
+  //Mnemonic: (q)uite
   map('q').to('q', 'left_command'),
   map('y').to('up_arrow', 'left_control'),
   map('period').to('display_brightness_decrement'),
   map('slash').to('display_brightness_increment'),
-  map('b').to('h', 'left_command'),
+  //Hide current focusing app
+  //Mnemonic: f(f)ade out
+  map('f').to('h', 'left_command'),
   map('j').to('tab', ['left_command', 'shift']),
   map('k').to('tab', 'left_command'),
   map('l').to('volume_decrement'),
