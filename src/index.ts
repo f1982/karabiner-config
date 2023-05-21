@@ -21,6 +21,7 @@ import { mail } from './apps/mail'
 import { spotify } from './apps/spotify'
 import { emoji } from './layers/emoji-layer'
 import { xcode } from './apps/xcode'
+import { navigationLayer } from './layers/navigation-layer'
 
 writeToProfile('Andy', [
   holistic,
@@ -28,6 +29,7 @@ writeToProfile('Andy', [
 
   // Layers
   systemLayer,
+  navigationLayer,
   editLayer,
   removeLayer,
   selectLayer,

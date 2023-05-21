@@ -14,7 +14,11 @@ export const systemLayer = simlayer('s', 'system').manipulators([
   map('k').to('tab', 'left_command'),
   map('l').to('volume_decrement'),
   map('semicolon').to('volume_increment'),
-  map('m').to('rewind'),
-  map('comma').to('fastforward'),
+
+  // map('m').to('rewind'),
+  // map('comma').to('fastforward'),
+  map('m').to('hyphen', 'left_command'),
+  map('comma').to('equal_sign', 'left_command'),
+
   map('return_or_enter').to('play_or_pause'),
 ])

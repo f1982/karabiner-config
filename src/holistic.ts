@@ -24,6 +24,7 @@ export const holistic = rule('Global shortcut keys').manipulators([
   mapSimultaneous(['k', 'semicolon']).to('right_shift', 'right_control'),
   mapSimultaneous(['j', 'l']).to('right_shift', 'right_option'),
   mapSimultaneous(['j', 'semicolon']).to('right_shift', 'right_command'),
+  mapSimultaneous(['j', 'comma']).to('right_command','right_option'),
 
 
   // Read selected text
