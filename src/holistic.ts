@@ -21,6 +21,8 @@ export const holistic = rule('Global shortcut keys').manipulators([
   mapSimultaneous(['l', 'semicolon']).to('right_control'),
   mapSimultaneous(['k', 'h']).to('right_shift'),
   
+  // Right side multiple modifiers
+  // 
   mapSimultaneous(['k', 'semicolon']).to('right_shift', 'right_control'),
   mapSimultaneous(['j', 'l']).to('right_shift', 'right_option'),
   mapSimultaneous(['j', 'semicolon']).to('right_shift', 'right_command'),
