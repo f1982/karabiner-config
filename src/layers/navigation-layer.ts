@@ -1,10 +1,7 @@
 import { duoLayer, map } from 'karabiner.ts'
 
 export const navigationLayer = duoLayer('c', 'x', 'universal').manipulators([
-  // Zoom in and zoom out
-  // map('o').to('equal_sign', 'left_command'),
-  // map('p').to('hyphen', 'left_command'),
-
+  // Playback
   map('m').to('rewind'),
   map(',').to('fastforward'),
 

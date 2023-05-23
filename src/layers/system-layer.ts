@@ -17,6 +17,7 @@ export const systemLayer = simlayer('s', 'system').manipulators([
 
   // map('m').to('rewind'),
   // map('comma').to('fastforward'),
+  // Zoom in and zoom out
   map('m').to('hyphen', 'left_command'),
   map('comma').to('equal_sign', 'left_command'),
 
