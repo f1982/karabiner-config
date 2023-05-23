@@ -10,7 +10,7 @@ import { selectLayer } from './layers/select-layer'
 import { systemLayer } from './layers/system-layer'
 import { numberLayer } from './layers/number-layer'
 import { leftSymbol, rightSymbol } from './layers/symbol-layer'
-// system
+
 import { quickLaunch } from './quick-launch'
 import { notion } from './apps/notion'
 import { holistic } from './holistic'
@@ -22,6 +22,7 @@ import { spotify } from './apps/spotify'
 import { emoji } from './layers/emoji-layer'
 import { xcode } from './apps/xcode'
 import { navigationLayer } from './layers/navigation-layer'
+import { figma } from './apps/figma'
 
 writeToProfile('Andy', [
   holistic,
@@ -49,4 +50,5 @@ writeToProfile('Andy', [
   xcode,
   notion,
   slack,
+  figma
 ])
