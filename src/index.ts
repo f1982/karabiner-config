@@ -1,4 +1,4 @@
-import { writeToProfile } from 'karabiner.ts'
+import { defaultComplexModificationsParameters, defaultDuoLayerParameters, defaultSimlayerParameters, writeToProfile } from 'karabiner.ts'
 
 import { arc } from './apps/arc'
 import { vscode } from './apps/vscode'
@@ -23,6 +23,11 @@ import { emoji } from './layers/emoji-layer'
 import { xcode } from './apps/xcode'
 import { navigationLayer } from './layers/navigation-layer'
 import { figma } from './apps/figma'
+
+defaultComplexModificationsParameters['basic.simultaneous_threshold_milliseconds'] = 41
+defaultComplexModificationsParameters['basic.to_if_alone_timeout_milliseconds'] = 1001
+defaultComplexModificationsParameters['basic.to_if_held_down_threshold_milliseconds'] = 501
+defaultComplexModificationsParameters['basic.to_delayed_action_delay_milliseconds'] = 501
 
 writeToProfile('Andy', [
   holistic,
