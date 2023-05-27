@@ -1,12 +1,13 @@
 import { duoLayer, map, withMapper } from 'karabiner.ts'
 
+//Add a dev quick launch, only switch few apps during the dev env, to accelerate the switching speed
 export const quickLaunch = duoLayer(
-  'period',
-  'slash',
+  'j',
+  'p',
   'quick launch',
 ).manipulators([
   withMapper({
-    ',': 'System Settings',
+    q: 'System Settings',
     c: 'Calendar',
     f: 'Finder',
     w: 'WeChat',

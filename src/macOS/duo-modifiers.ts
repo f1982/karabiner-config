@@ -1,10 +1,6 @@
-import { map, mapDoubleTap, mapSimultaneous, rule } from 'karabiner.ts'
+import { mapSimultaneous, rule } from "karabiner.ts";
 
-export const holistic = rule('Global shortcut keys').manipulators([
-  // Remap to esc
-  map('⇪').toHyper().toIfAlone('⎋'),
-
-  // Double tap modifiers
+export const dueModifiers = rule('due modifiers').manipulators([
   // Left hand
   mapSimultaneous(['f', 'd']).to('left_command'),
   mapSimultaneous(['d', 's']).to('left_option'),
@@ -39,22 +35,4 @@ export const holistic = rule('Global shortcut keys').manipulators([
   mapSimultaneous(['j', 'semicolon']).to('right_command', 'right_control'),
   //Control
   mapSimultaneous(['k', 'semicolon']).to('right_control', 'right_option'),
-
-
-  // Read selected text
-  // left_command key will be accidentally tapped
-  // left_control key has been used for open below side bar
-  map('left_option')
-    .to('left_option')
-    .toIfAlone('p', ['left_option', 'left_control']),
-
-  // Double click esc to look up in dictionary
-  mapDoubleTap('escape').to('r', [
-    'left_control',
-    'left_option',
-    'left_command',
-  ]),
-
-  // Double click tab to take a screenshot
-  mapDoubleTap('tab').to('4', ['left_shift', 'left_command']),
 ])

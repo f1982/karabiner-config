@@ -11,9 +11,12 @@ import { systemLayer } from './layers/system-layer'
 import { numberLayer } from './layers/number-layer'
 import { leftSymbol, rightSymbol } from './layers/symbol-layer'
 
+// macOS
+import { holistic } from './macOS/holistic'
+import { dueModifiers } from './macOS/duo-modifiers'
+
 import { quickLaunch } from './quick-launch'
 import { notion } from './apps/notion'
-import { holistic } from './holistic'
 import { slack } from './apps/slack'
 import { chrome } from './apps/chrome'
 import { zoom } from './apps/zoom'
@@ -23,14 +26,14 @@ import { emoji } from './layers/emoji-layer'
 import { xcode } from './apps/xcode'
 import { navigationLayer } from './layers/navigation-layer'
 import { figma } from './apps/figma'
+import { initializeParams } from './parameters'
 
-defaultComplexModificationsParameters['basic.simultaneous_threshold_milliseconds'] = 41
-defaultComplexModificationsParameters['basic.to_if_alone_timeout_milliseconds'] = 1001
-defaultComplexModificationsParameters['basic.to_if_held_down_threshold_milliseconds'] = 501
-defaultComplexModificationsParameters['basic.to_delayed_action_delay_milliseconds'] = 501
+
+initializeParams()
 
 writeToProfile('Andy', [
   holistic,
+  dueModifiers,
   quickLaunch,
 
   // Layers

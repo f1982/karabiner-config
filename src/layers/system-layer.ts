@@ -1,17 +1,19 @@
-import { map, simlayer } from 'karabiner.ts'
+import { duoLayer, map, simlayer } from 'karabiner.ts'
 
-export const systemLayer = simlayer('s', 'system').manipulators([
+// export const systemLayer = simlayer('s', 'system').manipulators([
+export const systemLayer = duoLayer('f', 'q', 'system').manipulators([
   //Quite current app
   //Mnemonic: (q)uite
-  map('q').to('q', 'left_command'),
+  map('return_or_enter').to('q', 'left_command'),
   map('y').to('up_arrow', 'left_control'),
   //Show only front app, hide all others
   map('u').to('h', ['left_command', 'left_option']),
   map('period').to('display_brightness_decrement'),
   map('slash').to('display_brightness_increment'),
   //Hide current focusing app
+  map('m').to('hyphen', 'left_command'),
+  map('n').to('m', 'left_command'),
   //Mnemonic: f(f)ade out
-  map('f').to('h', 'left_command'),
   map('j').to('tab', ['left_command', 'shift']),
   map('k').to('tab', 'left_command'),
   map('l').to('volume_decrement'),
@@ -21,7 +23,7 @@ export const systemLayer = simlayer('s', 'system').manipulators([
   map('m').to('hyphen', 'left_command'),
   map('comma').to('equal_sign', 'left_command'),
 
-  map('return_or_enter').to('play_or_pause'),
+  map('spacebar').to('play_or_pause'),
   // Show desktop
   map('quote').to('f10'),
   map('g').to('f10'),
