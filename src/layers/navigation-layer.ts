@@ -1,6 +1,6 @@
 import { duoLayer, map } from 'karabiner.ts'
 
-export const navigationLayer = duoLayer('f', 'z', 'navigation').manipulators([
+export const navigationLayer = duoLayer('f', 'q', 'navigation').manipulators([
   // Playback
   map('m').to('rewind'),
   map(',').to('fastforward'),

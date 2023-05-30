@@ -6,6 +6,7 @@ export const emoji = duoLayer('z', 'x','z-mode')
       slash: '❓', // question mark
       f: '[Facepalm]', // facepalm
       j: '😂', // Joy cry
+      i: '✅', // Check
       u: '👍', // thumb Up
       l: '😀', // Laugh
       o: '👌', // Ok

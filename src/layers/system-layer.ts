@@ -1,12 +1,13 @@
 import { duoLayer, map } from 'karabiner.ts'
 
-export const systemLayer = duoLayer('f', 'q', 'system').manipulators([
+export const systemLayer = duoLayer('f', 'z', 'system').manipulators([
   //Quite current app
   //Mnemonic: (q)uite
   map('return_or_enter').to('q', 'left_command'),
-  map('y').to('up_arrow', 'left_control'),
+  // map('y').to('up_arrow', 'left_control'),
+  map('y').to('f10'),
   //Show only front app, hide all others
-  map('u').to('h', ['left_command', 'left_option']),
+  map('h').to('h', ['left_command', 'left_option']),
   map('period').to('display_brightness_decrement'),
   map('slash').to('display_brightness_increment'),
   //Hide current focusing app
