@@ -1,6 +1,5 @@
-import { duoLayer, map, simlayer } from 'karabiner.ts'
+import { duoLayer, map } from 'karabiner.ts'
 
-// export const systemLayer = simlayer('s', 'system').manipulators([
 export const systemLayer = duoLayer('f', 'q', 'system').manipulators([
   //Quite current app
   //Mnemonic: (q)uite

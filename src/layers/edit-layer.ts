@@ -1,7 +1,5 @@
 import { map, simlayer } from 'karabiner.ts'
 
-// export const editLayer = layer('e', 'edit')
-//   .modifiers('Hyper')
 export const editLayer = simlayer('e', 'edit').manipulators([
   map('u').to('left_arrow'),
   map('i').to('right_arrow'),
