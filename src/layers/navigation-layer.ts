@@ -10,8 +10,8 @@ export const navigationLayer = duoLayer('f', 'q', 'navigation').manipulators([
   map('i').to('close_bracket', 'left_command'),
 
   // Switch tab
-  map('j').to('tab', 'left_control'),
-  map('k').to('tab', ['left_control', 'left_shift']),
+  map('k').to('tab', 'left_control'),
+  map('j').to('tab', ['left_control', 'left_shift']),
 
   // Code navigation
   map('l').to('open_bracket', 'left_control'),

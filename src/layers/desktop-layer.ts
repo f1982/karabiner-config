@@ -25,6 +25,3 @@ export const desktopLayer = simlayer('d', 'windows management').manipulators(
     map(key as FromKeyParam).to(key as ToKeyParam, ['option', 'control']),
   ),
 )
-function simLayer(arg0: string, arg1: string, arg2: string) {
-  throw new Error('Function not implemented.')
-}

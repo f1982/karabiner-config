@@ -41,3 +41,4 @@ export const leftSymbol = simlayer('j', 'symbol-left')
     map('v').to('backslash'),
     map('b').to('6', 'shift'),
   ])
+  
