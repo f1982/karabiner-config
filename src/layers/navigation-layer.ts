@@ -9,6 +9,10 @@ export const navigationLayer = duoLayer('f', 'q', 'navigation').manipulators([
   map('u').to('open_bracket', 'left_command'),
   map('i').to('close_bracket', 'left_command'),
 
+  // Windows of an app navigation
+  map('o').to('`', ['left_command', 'left_shift']),
+  map('p').to('`', 'left_command'),
+
   // Switch tab
   map('k').to('tab', 'left_control'),
   map('j').to('tab', ['left_control', 'left_shift']),

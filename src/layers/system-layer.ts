@@ -14,7 +14,7 @@ export const systemLayer = duoLayer('f', 'z', 'system').manipulators([
   map('slash').to('display_brightness_increment'),
 
   //Hide current focusing app
-  map('m').to('hyphen', 'left_command'),
+  // map('m').to('hyphen', 'left_command'),
   map('n').to('m', 'left_command'),
 
   //Mnemonic: f(f)ade out
