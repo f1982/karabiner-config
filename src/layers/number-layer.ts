@@ -1,6 +1,6 @@
-import { map, simlayer, withMapper } from 'karabiner.ts'
+import { map, withMapper } from 'karabiner.ts'
 
-export const numberLayer = simlayer('v', 'Number layer').manipulators([
+export const numberLayer = [
   map('y').to('8', 'shift'),
   map('p').to('equal_sign', 'shift'),
   map('h').to('slash'),
@@ -18,4 +18,4 @@ export const numberLayer = simlayer('v', 'Number layer').manipulators([
     comma: '2',
     period: '3',
   } as const)((k, v) => map(k).to(v)),
-])
+]

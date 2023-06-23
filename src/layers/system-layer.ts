@@ -1,36 +1,40 @@
-import { duoLayer, map } from 'karabiner.ts'
+import { map, toKey } from 'karabiner.ts'
 
-export const systemLayer = duoLayer('f', 'z', 'system').manipulators([
+const config = {
+  quiteApp: toKey('q', 'left_command'),
+  showOnlyCurrentApp: toKey('h', ['left_command', 'left_option']),
+  hideCurrentApp: toKey('h', 'left_command'),
+  increaseBrightness: toKey('display_brightness_increment'),
+  decreaseBrightness: toKey('display_brightness_decrement'),
+  minimiseWindow: toKey('m', 'left_command'),
+
+  switchApps: toKey('tab', 'left_command'),
+  switchAppsOpposite: toKey('tab', ['left_command', 'shift']),
+  zoomIn: toKey('equal_sign', 'left_command'),
+  zoomOut: toKey('hyphen', 'left_command'),
+}
+export const systemLayer = [
   //Quite current app
-  //Mnemonic: (q)uite
-  map('return_or_enter').to('q', 'left_command'),
+  map('return_or_enter').to(config.quiteApp),
   // map('y').to('up_arrow', 'left_control'),
+  map('s').to(config.showOnlyCurrentApp),
+  map('h').to(config.hideCurrentApp),
+  map('period').to(config.decreaseBrightness),
+  map('slash').to(config.increaseBrightness),
+  map('n').to(config.minimiseWindow),
+  map('j').to(config.switchAppsOpposite),
+  map('k').to(config.switchApps),
 
-  //Show only front app, hide all others
-  map('s').to('h', ['left_command', 'left_option']),
-  // Hide the focusing app
-  map('h').to('h', ['left_command']),
-  map('period').to('display_brightness_decrement'),
-  map('slash').to('display_brightness_increment'),
-
-  //Hide current focusing app
-  // map('m').to('hyphen', 'left_command'),
-  map('n').to('m', 'left_command'),
-
-  //Mnemonic: f(f)ade out
-  map('j').to('tab', ['left_command', 'shift']),
-  map('k').to('tab', 'left_command'),
+  // Volume
   map('l').to('volume_decrement'),
   map('semicolon').to('volume_increment'),
-
   // Zoom in and zoom out
-  map('o').to('hyphen', 'left_command'),
-  map('p').to('equal_sign', 'left_command'),
+  map('o').to(config.zoomOut),
+  map('p').to(config.zoomIn),
 
   // Next & prev
   map('m').to('rewind'),
   map(',').to('fastforward'),
-
   map('spacebar').to('play_or_pause'),
 
   // Show desktop
@@ -38,4 +42,4 @@ export const systemLayer = duoLayer('f', 'z', 'system').manipulators([
   map('d').to('f10'),
   map('quote').to('f10'),
   map('g').to('f10'),
-])
+]

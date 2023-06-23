@@ -1,6 +1,6 @@
-import { map, simlayer } from 'karabiner.ts'
+import { map } from 'karabiner.ts'
 
-export const selectLayer = simlayer('w', 'word-select').manipulators([
+export const selectLayer = [
   map('u').to('left_arrow', 'shift'),
   map('i').to('right_arrow', 'shift'),
   map('h').to('left_arrow', ['shift', 'command']),
@@ -15,4 +15,4 @@ export const selectLayer = simlayer('w', 'word-select').manipulators([
   // Copy and cut
   map('p').to('c', 'command'),
   map('o').to('x', 'command'),
-])
+]

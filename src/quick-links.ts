@@ -1,4 +1,4 @@
-import { duoLayer, map, withMapper } from 'karabiner.ts'
+import { map, withMapper } from 'karabiner.ts'
 
 // https://github.com/raycast/extensions/pull/4240/files
 const toArcLink = (link: string) => {
@@ -32,7 +32,7 @@ end tell'`
 }
 
 //Add a dev quick launch, only switch few apps during the dev env, to accelerate the switching speed
-export const quickLinks = duoLayer('m', ',', 'quick links').manipulators([
+export const quickLinks =[
   withMapper({
     q: 'http://localhost:3000',
     w: 'http://localhost:4200',
@@ -53,4 +53,4 @@ export const quickLinks = duoLayer('m', ',', 'quick links').manipulators([
     // v: '',
     // b: '',
   })((k, v) => map(k).to$(toArcLink(v))),
-])
+]

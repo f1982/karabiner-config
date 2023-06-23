@@ -1,7 +1,6 @@
-import { duoLayer, map, withMapper } from 'karabiner.ts'
+import { map, withMapper } from 'karabiner.ts'
 
-export const emoji = duoLayer('z', 'x','z-mode')
-  .manipulators([
+export const emoji = [
     withMapper({
       slash: '❓', // question mark
       f: '[Facepalm]', // facepalm
@@ -15,5 +14,5 @@ export const emoji = duoLayer('z', 'x','z-mode')
       m: '🙈', // Monkey facepalm
       period: '🤔', // thinking, mnemonic: ...
     })((k, v) => map(k).toPaste(v)),
-  ])
+  ]
   

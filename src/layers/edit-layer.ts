@@ -1,6 +1,6 @@
-import { map, simlayer } from 'karabiner.ts'
+import { map } from 'karabiner.ts'
 
-export const editLayer = simlayer('e', 'edit').manipulators([
+export const editLayer = [
   map('u').to('left_arrow'),
   map('i').to('right_arrow'),
 
@@ -16,4 +16,4 @@ export const editLayer = simlayer('e', 'edit').manipulators([
   // map('spacebar').to('v', 'command'),
   // map('r').to('v', 'command'),
   map('p').to('v', 'command'),
-])
+]

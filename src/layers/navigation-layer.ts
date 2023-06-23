@@ -1,11 +1,12 @@
-import { duoLayer, map } from 'karabiner.ts'
+import { map } from 'karabiner.ts'
 
-export const navigationLayer = duoLayer('f', 'q', 'navigation').manipulators([
+export const navigationLayer = [
   // Playback
   map('m').to('rewind'),
   map(',').to('fastforward'),
 
   // History navigation
+  map('h').to('tab', '<⌃'),
   map('u').to('open_bracket', 'left_command'),
   map('i').to('close_bracket', 'left_command'),
 
@@ -20,4 +21,4 @@ export const navigationLayer = duoLayer('f', 'q', 'navigation').manipulators([
   // Code navigation
   map('l').to('open_bracket', 'left_control'),
   map(';').to('close_bracket', ['left_control']),
-])
+]

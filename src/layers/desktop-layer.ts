@@ -6,7 +6,7 @@ import {
 } from 'karabiner.ts'
 
 // export const desktopLayer = duoLayer('d', 'f','windows management')
-export const desktopLayer = simlayer('d', 'windows management').manipulators(
+export const desktopLayer = 
   [
     'y',
     'u',
@@ -23,5 +23,4 @@ export const desktopLayer = simlayer('d', 'windows management').manipulators(
     'spacebar',
   ].map((key) =>
     map(key as FromKeyParam).to(key as ToKeyParam, ['option', 'control']),
-  ),
-)
+  )

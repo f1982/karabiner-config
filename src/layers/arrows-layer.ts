@@ -1,6 +1,6 @@
-import { duoLayer, map } from 'karabiner.ts'
+import { map } from 'karabiner.ts'
 
-export const arrowsLayer = duoLayer('.', '/', 'navigation').manipulators([
+export const arrowsLayer = [
   // Playback
   map('s').to('left_arrow'),
   map('f').to('right_arrow'),
@@ -8,4 +8,4 @@ export const arrowsLayer = duoLayer('.', '/', 'navigation').manipulators([
   // History navigation
   map('e').to('up_arrow'),
   map('d').to('down_arrow'),
-])
+]

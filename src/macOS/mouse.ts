@@ -1,8 +1,18 @@
-import { map, rule } from 'karabiner.ts'
+import { toMouseCursorPosition, toMouseKey } from 'karabiner.ts'
 
-export const mouseCursor = rule('Mouse Cursor Position').manipulators([
-  map('←', 'Meh').toMouseCursorPosition({ x: '25%', y: '50%' }),
-  map('→', 'Meh').toMouseCursorPosition({ x: '75%', y: '50%' }),
-  map('↓', 'Meh').toMouseCursorPosition({ x: '50%', y: '50%' }),
-  map('↑', 'Meh').toMouseKey({ x: 1560 }),
-])
+const scrollUp = (v = 1) =>
+  toMouseKey({ vertical_wheel: -32, speed_multiplier: v })
+const scrollLeft = (v = 1) =>
+  toMouseKey({ horizontal_wheel: -32, speed_multiplier: v })
+const scrollDown = (v = 1) =>
+  toMouseKey({ vertical_wheel: 32, speed_multiplier: v })
+const scrollRight = (v = 1) =>
+  toMouseKey({ horizontal_wheel: 32, speed_multiplier: v })
+
+export const mouseCursor = {
+  i: scrollUp(),
+  k: scrollDown(),
+  j: scrollLeft(),
+  l: scrollRight(),
+  p: toMouseCursorPosition({ x: '88%', y: '3%' }),
+}

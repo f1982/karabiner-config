@@ -2,7 +2,7 @@ import { layer, map, simlayer } from 'karabiner.ts'
 
 // export const removeLayer = layer('r', 'remove')
 //   .modifiers('Hyper')
-export const removeLayer = simlayer('r', 'remove').manipulators([
+export const removeLayer = [
   map('u').to('delete_or_backspace'),
   map('i').to('delete_forward'),
   map('h').to('delete_or_backspace', 'command'),
@@ -13,4 +13,4 @@ export const removeLayer = simlayer('r', 'remove').manipulators([
   // Paste
   // map('spacebar').to('v', 'command'),
   map('spacebar').to('p', 'command'),
-])
+]

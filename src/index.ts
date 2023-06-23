@@ -1,4 +1,4 @@
-import { writeToProfile } from 'karabiner.ts'
+import { duoLayer, simlayer, writeToProfile } from 'karabiner.ts'
 
 import { arc } from './apps/arc'
 import { vscode } from './apps/vscode'
@@ -23,34 +23,31 @@ import { slack } from './apps/slack'
 import { spotify } from './apps/spotify'
 import { xcode } from './apps/xcode'
 import { zoom } from './apps/zoom'
-import { arrowsLayer } from './layers/arrows-layer'
 import { emoji } from './layers/emoji-layer'
 import { navigationLayer } from './layers/navigation-layer'
-import { initializeParams } from './parameters'
+import { mouseCursor } from './macOS/mouse'
 import { quickLaunch } from './quick-launch'
 import { quickLinks } from './quick-links'
 
 
-initializeParams()
-
-writeToProfile('Andy', [
+const rules = [
   holistic,
   dueModifiers,
-  quickLaunch,
-  quickLinks,
+  duoLayer('.', '/', 'quick launch').manipulators(quickLaunch),
+  duoLayer('m', ',', 'quick links').manipulators(quickLinks),
+  duoLayer('f', 'z', 'system').manipulators(systemLayer),
+  duoLayer('f', 'q', 'navigation').manipulators(navigationLayer),
+  duoLayer('f', 'w', 'mouse').manipulators(mouseCursor),
 
-  // Layers
-  systemLayer,
-  navigationLayer,
-  editLayer,
-  removeLayer,
-  selectLayer,
-  desktopLayer,
-  numberLayer,
-  leftSymbol,
-  rightSymbol,
-  emoji,
-  arrowsLayer,
+  simlayer('e', 'edit').manipulators(editLayer),
+  simlayer('r', 'remove').manipulators(removeLayer),
+  simlayer('w', 'word-select').manipulators(selectLayer),
+  simlayer('d', 'windows management').manipulators(desktopLayer),
+  simlayer('v', 'Number layer').manipulators(numberLayer),
+  simlayer('f', 'symbol-right').manipulators(rightSymbol),
+  simlayer('j', 'symbol-left').manipulators(leftSymbol),
+  duoLayer('z', 'x', 'z-mode').manipulators(emoji),
+  // duoLayer('.', '/', 'navigation').manipulators(arrowsLayer),
 
   // Apps
   vscode,
@@ -62,5 +59,12 @@ writeToProfile('Andy', [
   xcode,
   notion,
   slack,
-  figma
-])
+  figma,
+]
+
+writeToProfile('Andy', rules, {
+  'basic.simultaneous_threshold_milliseconds': 49,
+  'basic.to_if_alone_timeout_milliseconds': 1000,
+  'basic.to_if_held_down_threshold_milliseconds': 500,
+  'basic.to_delayed_action_delay_milliseconds': 500,
+})
