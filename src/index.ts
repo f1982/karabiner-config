@@ -28,6 +28,7 @@ import { emoji } from './layers/emoji-layer'
 import { navigationLayer } from './layers/navigation-layer'
 import { initializeParams } from './parameters'
 import { quickLaunch } from './quick-launch'
+import { quickLinks } from './quick-links'
 
 
 initializeParams()
@@ -36,6 +37,7 @@ writeToProfile('Andy', [
   holistic,
   dueModifiers,
   quickLaunch,
+  quickLinks,
 
   // Layers
   systemLayer,
