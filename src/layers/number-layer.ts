@@ -2,7 +2,7 @@ import { map, withMapper } from 'karabiner.ts'
 
 export const numberLayer = [
   map('y').to('8', 'shift'),
-  map('p').to('equal_sign', 'shift'),
+  map('p').to('delete_or_backspace'),
   map('h').to('slash'),
   map('semicolon').to('hyphen'),
   map('slash').to('period'),

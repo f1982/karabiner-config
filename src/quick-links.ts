@@ -40,10 +40,10 @@ export const quickLinks =[
     r: 'http://localhost:8080',
     t: 'https://twitter.com',
     //
-    a: 'https://chat.openai.com',
-    s: 'http://andycao.me/',
-    d: 'https://github.com/f1982',
-    f: 'https://www.google.com/',
+    g: 'https://chat.openai.com',
+    s: 'https://www.google.com',
+    // d: '',
+    f: 'https://github.com/f1982',
     // g: '',
 
     // for work?

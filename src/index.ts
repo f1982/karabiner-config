@@ -29,7 +29,6 @@ import { mouseCursor } from './macOS/mouse'
 import { quickLaunch } from './quick-launch'
 import { quickLinks } from './quick-links'
 
-
 const rules = [
   holistic,
   dueModifiers,
@@ -40,15 +39,18 @@ const rules = [
   duoLayer('f', 'w', 'mouse').manipulators(mouseCursor),
 
   simlayer('e', 'edit').manipulators(editLayer),
+  // duoLayer('e', 'j', 'edit').manipulators(editLayer),
   simlayer('r', 'remove').manipulators(removeLayer),
+  // duoLayer('r', 'j', 'remove').manipulators(removeLayer),
   simlayer('w', 'word-select').manipulators(selectLayer),
   simlayer('d', 'windows management').manipulators(desktopLayer),
   simlayer('v', 'Number layer').manipulators(numberLayer),
+  duoLayer('v', 'z', 'Number layer').manipulators(numberLayer),
   simlayer('f', 'symbol-right').manipulators(rightSymbol),
   simlayer('j', 'symbol-left').manipulators(leftSymbol),
   duoLayer('z', 'x', 'z-mode').manipulators(emoji),
   // duoLayer('.', '/', 'navigation').manipulators(arrowsLayer),
-
+  
   // Apps
   vscode,
   arc,
