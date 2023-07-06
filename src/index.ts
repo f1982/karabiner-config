@@ -17,12 +17,14 @@ import { holistic } from './macOS/holistic'
 
 import { chrome } from './apps/chrome'
 import { figma } from './apps/figma'
+import { finder } from './apps/finder'
 import { mail } from './apps/mail'
 import { notion } from './apps/notion'
 import { slack } from './apps/slack'
 import { spotify } from './apps/spotify'
 import { xcode } from './apps/xcode'
 import { zoom } from './apps/zoom'
+import { arrowsLayer } from './layers/arrows-layer'
 import { emoji } from './layers/emoji-layer'
 import { navigationLayer } from './layers/navigation-layer'
 import { mouseCursor } from './macOS/mouse'
@@ -32,7 +34,7 @@ import { quickLinks } from './quick-links'
 const rules = [
   holistic,
   dueModifiers,
-  duoLayer('.', '/', 'quick launch').manipulators(quickLaunch),
+  duoLayer('j', '/', 'quick launch').manipulators(quickLaunch),
   duoLayer('m', ',', 'quick links').manipulators(quickLinks),
   duoLayer('f', 'z', 'system').manipulators(systemLayer),
   duoLayer('f', 'q', 'navigation').manipulators(navigationLayer),
@@ -49,7 +51,7 @@ const rules = [
   simlayer('f', 'symbol-right').manipulators(rightSymbol),
   simlayer('j', 'symbol-left').manipulators(leftSymbol),
   duoLayer('z', 'x', 'z-mode').manipulators(emoji),
-  // duoLayer('.', '/', 'navigation').manipulators(arrowsLayer),
+  duoLayer('j', 'p', 'arrow-keys').manipulators(arrowsLayer),
   
   // Apps
   vscode,
@@ -62,6 +64,7 @@ const rules = [
   notion,
   slack,
   figma,
+  finder,
 ]
 
 writeToProfile('Andy', rules, {

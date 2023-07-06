@@ -32,25 +32,31 @@ end tell'`
 }
 
 //Add a dev quick launch, only switch few apps during the dev env, to accelerate the switching speed
-export const quickLinks =[
+export const quickLinks = [
   withMapper({
+    // For fun
+    1: 'https://www.printables.com',
+    2: 'https://www.thingiverse.com',
+    3: 'https://soundcloud.com',
+    4: 'https://youtube.com',
+    // Debugging
     q: 'http://localhost:3000',
     w: 'http://localhost:4200',
     e: 'http://localhost:8000',
     r: 'http://localhost:8080',
     t: 'https://twitter.com',
-    //
+    // Tools
     g: 'https://chat.openai.com',
     s: 'https://www.google.com',
     // d: '',
     f: 'https://github.com/f1982',
     // g: '',
 
-    // for work?
+    // For work
     // z: '',
     // x: '',
-    // c: '',
-    // v: '',
-    // b: '',
+    c: 'https://leaderkit.atlassian.net/browse/T2KAN-3911', //mnemonic: task Collection
+    v: 'https://github.com/BoardPro/boardpro', //mnemonic: Version control
+    b: 'https://leaderkit.atlassian.net/jira/software/c/projects/T2KAN/boards', //mnemonic: kanban Board
   })((k, v) => map(k).to$(toArcLink(v))),
 ]
