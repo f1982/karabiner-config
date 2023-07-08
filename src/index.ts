@@ -30,6 +30,7 @@ import { navigationLayer } from './layers/navigation-layer'
 import { mouseCursor } from './macOS/mouse'
 import { quickLaunch } from './quick-launch'
 import { quickLinks } from './quick-links'
+import { jianying } from './apps/jianying'
 
 const rules = [
   holistic,
@@ -52,7 +53,7 @@ const rules = [
   simlayer('j', 'symbol-left').manipulators(leftSymbol),
   duoLayer('z', 'x', 'z-mode').manipulators(emoji),
   duoLayer('j', 'p', 'arrow-keys').manipulators(arrowsLayer),
-  
+
   // Apps
   vscode,
   arc,
@@ -65,6 +66,7 @@ const rules = [
   slack,
   figma,
   finder,
+  jianying,
 ]
 
 writeToProfile('Andy', rules, {
