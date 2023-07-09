@@ -44,7 +44,8 @@ export const quickLinks = [
     w: 'http://localhost:4200',
     e: 'http://localhost:8000',
     r: 'http://localhost:8080',
-    t: 'https://twitter.com',
+    // t: 'https://twitter.com',
+    t: 'https://translate.google.com',
     // Tools
     g: 'https://chat.openai.com',
     s: 'https://www.google.com',
